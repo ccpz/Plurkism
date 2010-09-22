@@ -1,0 +1,667 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F21684D012487C7D00A6AF17 /* PlurkController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21684CF12487C7D00A6AF17 /* PlurkController.m */; };
+		F21684D412487D4B00A6AF17 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = F21684D312487D4B00A6AF17 /* Common.h */; };
+		F26EFA3A124846BB00A69C88 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F26EFA39124846BB00A69C88 /* Security.framework */; };
+		F26EFA49124848A000A69C88 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F26EFA48124848A000A69C88 /* Cocoa.framework */; };
+		F26EFA4B124848A000A69C88 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F26EFA4A124848A000A69C88 /* PreferencePanes.framework */; };
+		F26EFA50124848A000A69C88 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F26EFA4E124848A000A69C88 /* InfoPlist.strings */; };
+		F26EFA56124848A000A69C88 /* PlurkismPane.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F26EFA55124848A000A69C88 /* PlurkismPane.tiff */; };
+		F26EFA5F1248490F00A69C88 /* about.htm in Resources */ = {isa = PBXBuildFile; fileRef = F26EFA5E1248490F00A69C88 /* about.htm */; };
+		F26EFA641248492D00A69C88 /* BSD.txt in Resources */ = {isa = PBXBuildFile; fileRef = F26EFA601248492D00A69C88 /* BSD.txt */; };
+		F26EFA651248492D00A69C88 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = F26EFA611248492D00A69C88 /* icon.icns */; };
+		F26EFA671248492D00A69C88 /* stig.txt in Resources */ = {isa = PBXBuildFile; fileRef = F26EFA631248492D00A69C88 /* stig.txt */; };
+		F26EFA6A1248494100A69C88 /* PlurkismPanePref.h in Headers */ = {isa = PBXBuildFile; fileRef = F26EFA681248494100A69C88 /* PlurkismPanePref.h */; };
+		F26EFA6B1248494100A69C88 /* PlurkismPanePref.m in Sources */ = {isa = PBXBuildFile; fileRef = F26EFA691248494100A69C88 /* PlurkismPanePref.m */; };
+		F26EFA6D1248497E00A69C88 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F26EFA39124846BB00A69C88 /* Security.framework */; };
+		F2AEBF36124830FE00BC51EF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2AEBF35124830FE00BC51EF /* Cocoa.framework */; };
+		F2AEBF3B124830FE00BC51EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2AEBF39124830FE00BC51EF /* InfoPlist.strings */; };
+		F2AEBF43124830FE00BC51EF /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F2AEBF41124830FE00BC51EF /* Credits.rtf */; };
+		F2AEBF521248318700BC51EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AEBF511248318700BC51EF /* main.m */; };
+		F2AEBF571248319900BC51EF /* PlurkismAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AEBF541248319900BC51EF /* PlurkismAppController.m */; };
+		F2AEBF581248319900BC51EF /* PlurkismGrowlDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AEBF561248319900BC51EF /* PlurkismGrowlDelegate.m */; };
+		F2AEBF5A124831AC00BC51EF /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = F2AEBF59124831AC00BC51EF /* icon.icns */; };
+		F2AEBF6A124831C900BC51EF /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AEBF5E124831C900BC51EF /* ASIDownloadCache.m */; };
+		F2AEBF6B124831C900BC51EF /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AEBF60124831C900BC51EF /* ASIFormDataRequest.m */; };
+		F2AEBF6C124831C900BC51EF /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AEBF62124831C900BC51EF /* ASIHTTPRequest.m */; };
+		F2AEBF6D124831C900BC51EF /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AEBF66124831C900BC51EF /* ASIInputStream.m */; };
+		F2AEBF6E124831C900BC51EF /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AEBF68124831C900BC51EF /* ASINetworkQueue.m */; };
+		F2AEBF821248326800BC51EF /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2AEBF811248326800BC51EF /* Growl.framework */; };
+		F2AEBF84124835F600BC51EF /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F2AEBF811248326800BC51EF /* Growl.framework */; };
+		F2AEBF861248367F00BC51EF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2AEBF851248367F00BC51EF /* SystemConfiguration.framework */; };
+		F2AEBF881248368D00BC51EF /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F2AEBF871248368D00BC51EF /* libz.1.2.3.dylib */; };
+		F2AEBF8A1248369500BC51EF /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2AEBF891248369500BC51EF /* CoreServices.framework */; };
+		F2AEBF971248371C00BC51EF /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AEBF8E1248371C00BC51EF /* NSObject+SBJSON.m */; };
+		F2AEBF981248371C00BC51EF /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AEBF901248371C00BC51EF /* NSString+SBJSON.m */; };
+		F2AEBF991248371C00BC51EF /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AEBF921248371C00BC51EF /* SBJsonBase.m */; };
+		F2AEBF9A1248371C00BC51EF /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AEBF941248371C00BC51EF /* SBJsonParser.m */; };
+		F2AEBF9B1248371C00BC51EF /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AEBF961248371C00BC51EF /* SBJsonWriter.m */; };
+		F2EC66D71248BBAA00E90D60 /* openSetting.scpt in Resources */ = {isa = PBXBuildFile; fileRef = F2EC66D61248BBAA00E90D60 /* openSetting.scpt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F2AEBF83124835ED00BC51EF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F2AEBF84124835F600BC51EF /* Growl.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F21684C3124866F700A6AF17 /* PlurkismPane.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlurkismPane.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
+		F21684CE12487C7D00A6AF17 /* PlurkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlurkController.h; sourceTree = "<group>"; };
+		F21684CF12487C7D00A6AF17 /* PlurkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlurkController.m; sourceTree = "<group>"; };
+		F21684D312487D4B00A6AF17 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		F26EFA39124846BB00A69C88 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Security.framework; sourceTree = "<group>"; };
+		F26EFA48124848A000A69C88 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F26EFA4A124848A000A69C88 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
+		F26EFA4C124848A000A69C88 /* PlurkismPane-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlurkismPane-Info.plist"; sourceTree = "<group>"; };
+		F26EFA4D124848A000A69C88 /* PlurkismPane_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlurkismPane_Prefix.pch; sourceTree = "<group>"; };
+		F26EFA4F124848A000A69C88 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F26EFA55124848A000A69C88 /* PlurkismPane.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = PlurkismPane.tiff; sourceTree = "<group>"; };
+		F26EFA5E1248490F00A69C88 /* about.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.htm; sourceTree = "<group>"; };
+		F26EFA601248492D00A69C88 /* BSD.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BSD.txt; sourceTree = "<group>"; };
+		F26EFA611248492D00A69C88 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		F26EFA631248492D00A69C88 /* stig.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stig.txt; sourceTree = "<group>"; };
+		F26EFA681248494100A69C88 /* PlurkismPanePref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlurkismPanePref.h; sourceTree = "<group>"; };
+		F26EFA691248494100A69C88 /* PlurkismPanePref.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlurkismPanePref.m; sourceTree = "<group>"; };
+		F2AEBF32124830FE00BC51EF /* Plurkism.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plurkism.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2AEBF35124830FE00BC51EF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F2AEBF37124830FE00BC51EF /* Plurkism-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Plurkism-Info.plist"; sourceTree = "<group>"; };
+		F2AEBF38124830FE00BC51EF /* Plurkism_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Plurkism_Prefix.pch; sourceTree = "<group>"; };
+		F2AEBF3A124830FE00BC51EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F2AEBF42124830FE00BC51EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		F2AEBF511248318700BC51EF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F2AEBF531248319900BC51EF /* PlurkismAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlurkismAppController.h; sourceTree = "<group>"; };
+		F2AEBF541248319900BC51EF /* PlurkismAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlurkismAppController.m; sourceTree = "<group>"; };
+		F2AEBF551248319900BC51EF /* PlurkismGrowlDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlurkismGrowlDelegate.h; sourceTree = "<group>"; };
+		F2AEBF561248319900BC51EF /* PlurkismGrowlDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlurkismGrowlDelegate.m; sourceTree = "<group>"; };
+		F2AEBF59124831AC00BC51EF /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		F2AEBF5C124831C900BC51EF /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
+		F2AEBF5D124831C900BC51EF /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
+		F2AEBF5E124831C900BC51EF /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
+		F2AEBF5F124831C900BC51EF /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		F2AEBF60124831C900BC51EF /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		F2AEBF61124831C900BC51EF /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		F2AEBF62124831C900BC51EF /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		F2AEBF63124831C900BC51EF /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		F2AEBF64124831C900BC51EF /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		F2AEBF65124831C900BC51EF /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		F2AEBF66124831C900BC51EF /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		F2AEBF67124831C900BC51EF /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		F2AEBF68124831C900BC51EF /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		F2AEBF69124831C900BC51EF /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		F2AEBF811248326800BC51EF /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
+		F2AEBF851248367F00BC51EF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SystemConfiguration.framework; sourceTree = "<group>"; };
+		F2AEBF871248368D00BC51EF /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libz.1.2.3.dylib; sourceTree = "<group>"; };
+		F2AEBF891248369500BC51EF /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreServices.framework; sourceTree = "<group>"; };
+		F2AEBF8C1248371C00BC51EF /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		F2AEBF8D1248371C00BC51EF /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		F2AEBF8E1248371C00BC51EF /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		F2AEBF8F1248371C00BC51EF /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		F2AEBF901248371C00BC51EF /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		F2AEBF911248371C00BC51EF /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		F2AEBF921248371C00BC51EF /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		F2AEBF931248371C00BC51EF /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		F2AEBF941248371C00BC51EF /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		F2AEBF951248371C00BC51EF /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		F2AEBF961248371C00BC51EF /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		F2EC66D61248BBAA00E90D60 /* openSetting.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = openSetting.scpt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F26EFA42124848A000A69C88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F26EFA6D1248497E00A69C88 /* Security.framework in Frameworks */,
+				F26EFA49124848A000A69C88 /* Cocoa.framework in Frameworks */,
+				F26EFA4B124848A000A69C88 /* PreferencePanes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2AEBF2F124830FE00BC51EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F26EFA3A124846BB00A69C88 /* Security.framework in Frameworks */,
+				F2AEBF8A1248369500BC51EF /* CoreServices.framework in Frameworks */,
+				F2AEBF881248368D00BC51EF /* libz.1.2.3.dylib in Frameworks */,
+				F2AEBF861248367F00BC51EF /* SystemConfiguration.framework in Frameworks */,
+				F2AEBF36124830FE00BC51EF /* Cocoa.framework in Frameworks */,
+				F2AEBF821248326800BC51EF /* Growl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F26EFA3C124848A000A69C88 /* PlurkismPane */ = {
+			isa = PBXGroup;
+			children = (
+				F26EFA3D124848A000A69C88 /* Classes */,
+				F26EFA3E124848A000A69C88 /* Other Sources */,
+				F26EFA3F124848A000A69C88 /* Resources */,
+				F26EFA40124848A000A69C88 /* Frameworks */,
+			);
+			path = PlurkismPane;
+			sourceTree = "<group>";
+		};
+		F26EFA3D124848A000A69C88 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F26EFA681248494100A69C88 /* PlurkismPanePref.h */,
+				F26EFA691248494100A69C88 /* PlurkismPanePref.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F26EFA3E124848A000A69C88 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F26EFA4D124848A000A69C88 /* PlurkismPane_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		F26EFA3F124848A000A69C88 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F26EFA5E1248490F00A69C88 /* about.htm */,
+				F26EFA4C124848A000A69C88 /* PlurkismPane-Info.plist */,
+				F26EFA4E124848A000A69C88 /* InfoPlist.strings */,
+				F26EFA55124848A000A69C88 /* PlurkismPane.tiff */,
+				F26EFA601248492D00A69C88 /* BSD.txt */,
+				F26EFA611248492D00A69C88 /* icon.icns */,
+				F26EFA631248492D00A69C88 /* stig.txt */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F26EFA40124848A000A69C88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F26EFA48124848A000A69C88 /* Cocoa.framework */,
+				F26EFA4A124848A000A69C88 /* PreferencePanes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F26EFA5D124848A700A69C88 /* Plurkism */ = {
+			isa = PBXGroup;
+			children = (
+				F2AEBF2A124830FE00BC51EF /* Classes */,
+				F2AEBF2B124830FE00BC51EF /* Other Sources */,
+				F2AEBF2C124830FE00BC51EF /* Resources */,
+				F2AEBF2D124830FE00BC51EF /* Frameworks */,
+			);
+			name = Plurkism;
+			sourceTree = "<group>";
+		};
+		F2AEBF23124830FD00BC51EF = {
+			isa = PBXGroup;
+			children = (
+				F26EFA5D124848A700A69C88 /* Plurkism */,
+				F21684D312487D4B00A6AF17 /* Common.h */,
+				F26EFA3C124848A000A69C88 /* PlurkismPane */,
+				F2AEBF33124830FE00BC51EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F2AEBF2A124830FE00BC51EF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F2AEBF801248323400BC51EF /* JSON */,
+				F2AEBF5B124831C900BC51EF /* ASIHTTPRequest */,
+				F2AEBF531248319900BC51EF /* PlurkismAppController.h */,
+				F2AEBF541248319900BC51EF /* PlurkismAppController.m */,
+				F2AEBF551248319900BC51EF /* PlurkismGrowlDelegate.h */,
+				F2AEBF561248319900BC51EF /* PlurkismGrowlDelegate.m */,
+				F21684CE12487C7D00A6AF17 /* PlurkController.h */,
+				F21684CF12487C7D00A6AF17 /* PlurkController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F2AEBF2B124830FE00BC51EF /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F2AEBF38124830FE00BC51EF /* Plurkism_Prefix.pch */,
+				F2AEBF511248318700BC51EF /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		F2AEBF2C124830FE00BC51EF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F2EC66D61248BBAA00E90D60 /* openSetting.scpt */,
+				F2AEBF59124831AC00BC51EF /* icon.icns */,
+				F2AEBF37124830FE00BC51EF /* Plurkism-Info.plist */,
+				F2AEBF39124830FE00BC51EF /* InfoPlist.strings */,
+				F2AEBF41124830FE00BC51EF /* Credits.rtf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F2AEBF2D124830FE00BC51EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F26EFA39124846BB00A69C88 /* Security.framework */,
+				F2AEBF891248369500BC51EF /* CoreServices.framework */,
+				F2AEBF871248368D00BC51EF /* libz.1.2.3.dylib */,
+				F2AEBF851248367F00BC51EF /* SystemConfiguration.framework */,
+				F2AEBF811248326800BC51EF /* Growl.framework */,
+				F2AEBF35124830FE00BC51EF /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2AEBF33124830FE00BC51EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2AEBF32124830FE00BC51EF /* Plurkism.app */,
+				F21684C3124866F700A6AF17 /* PlurkismPane.prefPane */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2AEBF5B124831C900BC51EF /* ASIHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				F2AEBF5C124831C900BC51EF /* ASICacheDelegate.h */,
+				F2AEBF5D124831C900BC51EF /* ASIDownloadCache.h */,
+				F2AEBF5E124831C900BC51EF /* ASIDownloadCache.m */,
+				F2AEBF5F124831C900BC51EF /* ASIFormDataRequest.h */,
+				F2AEBF60124831C900BC51EF /* ASIFormDataRequest.m */,
+				F2AEBF61124831C900BC51EF /* ASIHTTPRequest.h */,
+				F2AEBF62124831C900BC51EF /* ASIHTTPRequest.m */,
+				F2AEBF63124831C900BC51EF /* ASIHTTPRequestConfig.h */,
+				F2AEBF64124831C900BC51EF /* ASIHTTPRequestDelegate.h */,
+				F2AEBF65124831C900BC51EF /* ASIInputStream.h */,
+				F2AEBF66124831C900BC51EF /* ASIInputStream.m */,
+				F2AEBF67124831C900BC51EF /* ASINetworkQueue.h */,
+				F2AEBF68124831C900BC51EF /* ASINetworkQueue.m */,
+				F2AEBF69124831C900BC51EF /* ASIProgressDelegate.h */,
+			);
+			path = ASIHTTPRequest;
+			sourceTree = "<group>";
+		};
+		F2AEBF801248323400BC51EF /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				F2AEBF8C1248371C00BC51EF /* JSON.h */,
+				F2AEBF8D1248371C00BC51EF /* NSObject+SBJSON.h */,
+				F2AEBF8E1248371C00BC51EF /* NSObject+SBJSON.m */,
+				F2AEBF8F1248371C00BC51EF /* NSString+SBJSON.h */,
+				F2AEBF901248371C00BC51EF /* NSString+SBJSON.m */,
+				F2AEBF911248371C00BC51EF /* SBJsonBase.h */,
+				F2AEBF921248371C00BC51EF /* SBJsonBase.m */,
+				F2AEBF931248371C00BC51EF /* SBJsonParser.h */,
+				F2AEBF941248371C00BC51EF /* SBJsonParser.m */,
+				F2AEBF951248371C00BC51EF /* SBJsonWriter.h */,
+				F2AEBF961248371C00BC51EF /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F26EFA43124848A000A69C88 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F26EFA6A1248494100A69C88 /* PlurkismPanePref.h in Headers */,
+				F21684D412487D4B00A6AF17 /* Common.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F26EFA46124848A000A69C88 /* PlurkismPane */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F26EFA5A124848A000A69C88 /* Build configuration list for PBXNativeTarget "PlurkismPane" */;
+			buildPhases = (
+				F26EFA41124848A000A69C88 /* Sources */,
+				F26EFA42124848A000A69C88 /* Frameworks */,
+				F26EFA43124848A000A69C88 /* Headers */,
+				F26EFA44124848A000A69C88 /* Resources */,
+				F26EFA45124848A000A69C88 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlurkismPane;
+			productName = PlurkismPane;
+			productReference = F21684C3124866F700A6AF17 /* PlurkismPane.prefPane */;
+			productType = "com.apple.product-type.bundle";
+		};
+		F2AEBF31124830FE00BC51EF /* Plurkism */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2AEBF49124830FE00BC51EF /* Build configuration list for PBXNativeTarget "Plurkism" */;
+			buildPhases = (
+				F2AEBF2E124830FE00BC51EF /* Sources */,
+				F2AEBF2F124830FE00BC51EF /* Frameworks */,
+				F2AEBF30124830FE00BC51EF /* Resources */,
+				F2AEBF83124835ED00BC51EF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Plurkism;
+			productName = Plurkism;
+			productReference = F2AEBF32124830FE00BC51EF /* Plurkism.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2AEBF25124830FD00BC51EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = www.ytchiang.net;
+			};
+			buildConfigurationList = F2AEBF28124830FD00BC51EF /* Build configuration list for PBXProject "Plurkism" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F2AEBF23124830FD00BC51EF;
+			productRefGroup = F2AEBF33124830FE00BC51EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2AEBF31124830FE00BC51EF /* Plurkism */,
+				F26EFA46124848A000A69C88 /* PlurkismPane */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F26EFA44124848A000A69C88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F26EFA50124848A000A69C88 /* InfoPlist.strings in Resources */,
+				F26EFA56124848A000A69C88 /* PlurkismPane.tiff in Resources */,
+				F26EFA5F1248490F00A69C88 /* about.htm in Resources */,
+				F26EFA641248492D00A69C88 /* BSD.txt in Resources */,
+				F26EFA651248492D00A69C88 /* icon.icns in Resources */,
+				F26EFA671248492D00A69C88 /* stig.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2AEBF30124830FE00BC51EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2AEBF3B124830FE00BC51EF /* InfoPlist.strings in Resources */,
+				F2AEBF43124830FE00BC51EF /* Credits.rtf in Resources */,
+				F2AEBF5A124831AC00BC51EF /* icon.icns in Resources */,
+				F2EC66D71248BBAA00E90D60 /* openSetting.scpt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		F26EFA45124848A000A69C88 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F26EFA41124848A000A69C88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F26EFA6B1248494100A69C88 /* PlurkismPanePref.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2AEBF2E124830FE00BC51EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2AEBF521248318700BC51EF /* main.m in Sources */,
+				F2AEBF571248319900BC51EF /* PlurkismAppController.m in Sources */,
+				F2AEBF581248319900BC51EF /* PlurkismGrowlDelegate.m in Sources */,
+				F2AEBF6A124831C900BC51EF /* ASIDownloadCache.m in Sources */,
+				F2AEBF6B124831C900BC51EF /* ASIFormDataRequest.m in Sources */,
+				F2AEBF6C124831C900BC51EF /* ASIHTTPRequest.m in Sources */,
+				F2AEBF6D124831C900BC51EF /* ASIInputStream.m in Sources */,
+				F2AEBF6E124831C900BC51EF /* ASINetworkQueue.m in Sources */,
+				F2AEBF971248371C00BC51EF /* NSObject+SBJSON.m in Sources */,
+				F2AEBF981248371C00BC51EF /* NSString+SBJSON.m in Sources */,
+				F2AEBF991248371C00BC51EF /* SBJsonBase.m in Sources */,
+				F2AEBF9A1248371C00BC51EF /* SBJsonParser.m in Sources */,
+				F2AEBF9B1248371C00BC51EF /* SBJsonWriter.m in Sources */,
+				F21684D012487C7D00A6AF17 /* PlurkController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F26EFA4E124848A000A69C88 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F26EFA4F124848A000A69C88 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F2AEBF39124830FE00BC51EF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2AEBF3A124830FE00BC51EF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F2AEBF41124830FE00BC51EF /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2AEBF42124830FE00BC51EF /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F26EFA5B124848A000A69C88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PlurkismPane/PlurkismPane_Prefix.pch;
+				INFOPLIST_FILE = "PlurkismPane/PlurkismPane-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = PlurkismPane;
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Debug;
+		};
+		F26EFA5C124848A000A69C88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PlurkismPane/PlurkismPane_Prefix.pch;
+				INFOPLIST_FILE = "PlurkismPane/PlurkismPane-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = PlurkismPane;
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Release;
+		};
+		F2AEBF47124830FE00BC51EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		F2AEBF48124830FE00BC51EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		F2AEBF4A124830FE00BC51EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Plurkism_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					Classes,
+					.,
+				);
+				INFOPLIST_FILE = "Plurkism-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = Plurkism;
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F2AEBF4B124830FE00BC51EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Plurkism_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					Classes,
+					.,
+				);
+				INFOPLIST_FILE = "Plurkism-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = Plurkism;
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F26EFA5A124848A000A69C88 /* Build configuration list for PBXNativeTarget "PlurkismPane" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F26EFA5B124848A000A69C88 /* Debug */,
+				F26EFA5C124848A000A69C88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2AEBF28124830FD00BC51EF /* Build configuration list for PBXProject "Plurkism" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2AEBF47124830FE00BC51EF /* Debug */,
+				F2AEBF48124830FE00BC51EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2AEBF49124830FE00BC51EF /* Build configuration list for PBXNativeTarget "Plurkism" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2AEBF4A124830FE00BC51EF /* Debug */,
+				F2AEBF4B124830FE00BC51EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F2AEBF25124830FD00BC51EF /* Project object */;
+}
