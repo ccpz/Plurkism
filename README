@@ -1,0 +1,13 @@
+This is the source code of Plurkism,
+a growl application for pushing plurk messages
+
+to Build:
+
+	1. use XCode 3 or 4 to open this project
+	2. build Plurkism and PlurkismPane
+	
+to Run:
+
+	1. Copy PlurkismPane.prefPane to ~/Library/PreferencePanes/
+	2. Copy Plurkism.app to /Applications
+	3. Run Plurkism.app, fill in account and password in popuped preference Pane
