@@ -1,0 +1,23 @@
+//Copyright 2010 Yi-Ta Chiang
+//
+//Licensed under the Apache License, Version 2.0 (the "License");
+//you may not use this file except in compliance with the License.
+//You may obtain a copy of the License at 
+//
+//http://www.apache.org/licenses/LICENSE-2.0
+
+"Plurkism Error" = "Plurkism 錯誤";
+"Growl is not installed" = "沒有安裝 Growl";
+"Keychain data read error" = "讀取 Keychain 時發生錯誤";
+"Error Code: %ld, message:%@" = "錯誤碼: %ld, 說明:%@";
+"Login Failed: %@" = "登入失敗，原因: %@";
+"Login as %@ successed" = "以 %@ 登入成功";
+"Exit" = "離開";
+"Error" = "錯誤";
+"Info" = "資訊";
+"New Plurk Message" = "一則新 Plurk";
+"New Plurk Response" = "一則新回應";
+"Program not found" = "找不到程式";
+"%@ program is not found" = "%@ 程式找不到";
+"Keychain data modify error" = "修改 Keychain 時發生錯誤";
+"Keychain data add error" = "新增 Keychain 時發生錯誤";

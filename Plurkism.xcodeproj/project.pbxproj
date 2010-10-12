@@ -13,10 +13,8 @@
 		F26EFA49124848A000A69C88 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F26EFA48124848A000A69C88 /* Cocoa.framework */; };
 		F26EFA4B124848A000A69C88 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F26EFA4A124848A000A69C88 /* PreferencePanes.framework */; };
 		F26EFA50124848A000A69C88 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F26EFA4E124848A000A69C88 /* InfoPlist.strings */; };
-		F26EFA56124848A000A69C88 /* PlurkismPane.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F26EFA55124848A000A69C88 /* PlurkismPane.tiff */; };
 		F26EFA5F1248490F00A69C88 /* about.htm in Resources */ = {isa = PBXBuildFile; fileRef = F26EFA5E1248490F00A69C88 /* about.htm */; };
 		F26EFA641248492D00A69C88 /* BSD.txt in Resources */ = {isa = PBXBuildFile; fileRef = F26EFA601248492D00A69C88 /* BSD.txt */; };
-		F26EFA651248492D00A69C88 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = F26EFA611248492D00A69C88 /* icon.icns */; };
 		F26EFA671248492D00A69C88 /* stig.txt in Resources */ = {isa = PBXBuildFile; fileRef = F26EFA631248492D00A69C88 /* stig.txt */; };
 		F26EFA6A1248494100A69C88 /* PlurkismPanePref.h in Headers */ = {isa = PBXBuildFile; fileRef = F26EFA681248494100A69C88 /* PlurkismPanePref.h */; };
 		F26EFA6B1248494100A69C88 /* PlurkismPanePref.m in Sources */ = {isa = PBXBuildFile; fileRef = F26EFA691248494100A69C88 /* PlurkismPanePref.m */; };
@@ -46,6 +44,9 @@
 		F2EC66D71248BBAA00E90D60 /* openSetting.scpt in Resources */ = {isa = PBXBuildFile; fileRef = F2EC66D61248BBAA00E90D60 /* openSetting.scpt */; };
 		F2FA5C1C1263F4D70008663F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2FA5C1B1263F4D70008663F /* Localizable.strings */; };
 		F2FA5C1D1263F4D70008663F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2FA5C1B1263F4D70008663F /* Localizable.strings */; };
+		F2FA5C231263FDD10008663F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2FA5C221263FDD10008663F /* WebKit.framework */; };
+		F2FA5D0912640A160008663F /* PlurkismPane.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2FA5D0712640A160008663F /* PlurkismPane.xib */; };
+		F2FA5D0E12640A490008663F /* plurkism-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FA5D0D12640A490008663F /* plurkism-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -72,10 +73,8 @@
 		F26EFA4C124848A000A69C88 /* PlurkismPane-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlurkismPane-Info.plist"; sourceTree = "<group>"; };
 		F26EFA4D124848A000A69C88 /* PlurkismPane_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlurkismPane_Prefix.pch; sourceTree = "<group>"; };
 		F26EFA4F124848A000A69C88 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F26EFA55124848A000A69C88 /* PlurkismPane.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = PlurkismPane.tiff; sourceTree = "<group>"; };
 		F26EFA5E1248490F00A69C88 /* about.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.htm; sourceTree = "<group>"; };
 		F26EFA601248492D00A69C88 /* BSD.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BSD.txt; sourceTree = "<group>"; };
-		F26EFA611248492D00A69C88 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		F26EFA631248492D00A69C88 /* stig.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stig.txt; sourceTree = "<group>"; };
 		F26EFA681248494100A69C88 /* PlurkismPanePref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlurkismPanePref.h; sourceTree = "<group>"; };
 		F26EFA691248494100A69C88 /* PlurkismPanePref.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlurkismPanePref.m; sourceTree = "<group>"; };
@@ -123,6 +122,10 @@
 		F2EC66D61248BBAA00E90D60 /* openSetting.scpt */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.scpt; path = openSetting.scpt; sourceTree = "<group>"; };
 		F2FA5C111263E79A0008663F /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F2FA5C1F1263F4EF0008663F /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_TW; path = zh_TW.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F2FA5C221263FDD10008663F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		F2FA5D0812640A160008663F /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PlurkismPane.xib; sourceTree = "<group>"; };
+		F2FA5D0A12640A2B0008663F /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_TW; path = zh_TW.lproj/PlurkismPane.xib; sourceTree = "<group>"; };
+		F2FA5D0D12640A490008663F /* plurkism-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plurkism-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,7 @@
 				F26EFA6D1248497E00A69C88 /* Security.framework in Frameworks */,
 				F26EFA49124848A000A69C88 /* Cocoa.framework in Frameworks */,
 				F26EFA4B124848A000A69C88 /* PreferencePanes.framework in Frameworks */,
+				F2FA5C231263FDD10008663F /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,12 +187,12 @@
 		F26EFA3F124848A000A69C88 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F2FA5D0712640A160008663F /* PlurkismPane.xib */,
 				F26EFA5E1248490F00A69C88 /* about.htm */,
+				F2FA5D0D12640A490008663F /* plurkism-icon.png */,
 				F26EFA4C124848A000A69C88 /* PlurkismPane-Info.plist */,
 				F26EFA4E124848A000A69C88 /* InfoPlist.strings */,
-				F26EFA55124848A000A69C88 /* PlurkismPane.tiff */,
 				F26EFA601248492D00A69C88 /* BSD.txt */,
-				F26EFA611248492D00A69C88 /* icon.icns */,
 				F26EFA631248492D00A69C88 /* stig.txt */,
 			);
 			name = Resources;
@@ -197,6 +201,7 @@
 		F26EFA40124848A000A69C88 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F2FA5C221263FDD10008663F /* WebKit.framework */,
 				F26EFA48124848A000A69C88 /* Cocoa.framework */,
 				F26EFA4A124848A000A69C88 /* PreferencePanes.framework */,
 			);
@@ -389,6 +394,7 @@
 			knownRegions = (
 				en,
 				zh_TW,
+				English,
 			);
 			mainGroup = F2AEBF23124830FD00BC51EF;
 			productRefGroup = F2AEBF33124830FE00BC51EF /* Products */;
@@ -407,12 +413,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F26EFA50124848A000A69C88 /* InfoPlist.strings in Resources */,
-				F26EFA56124848A000A69C88 /* PlurkismPane.tiff in Resources */,
 				F26EFA5F1248490F00A69C88 /* about.htm in Resources */,
 				F26EFA641248492D00A69C88 /* BSD.txt in Resources */,
-				F26EFA651248492D00A69C88 /* icon.icns in Resources */,
 				F26EFA671248492D00A69C88 /* stig.txt in Resources */,
 				F2FA5C1D1263F4D70008663F /* Localizable.strings in Resources */,
+				F2FA5D0912640A160008663F /* PlurkismPane.xib in Resources */,
+				F2FA5D0E12640A490008663F /* plurkism-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +510,15 @@
 				F2FA5C1F1263F4EF0008663F /* zh_TW */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		F2FA5D0712640A160008663F /* PlurkismPane.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2FA5D0812640A160008663F /* English */,
+				F2FA5D0A12640A2B0008663F /* zh_TW */,
+			);
+			name = PlurkismPane.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

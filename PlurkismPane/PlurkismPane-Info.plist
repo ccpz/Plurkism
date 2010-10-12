@@ -25,7 +25,7 @@
 	<key>NSMainNibFile</key>
 	<string>PlurkismPane</string>
 	<key>NSPrefPaneIconFile</key>
-	<string>PlurkismPane.tiff</string>
+	<string>plurkism-icon.png</string>
 	<key>NSPrefPaneIconLabel</key>
 	<string>PlurkismPane</string>
 	<key>NSPrincipalClass</key>

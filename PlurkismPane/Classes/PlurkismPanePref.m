@@ -49,8 +49,8 @@
 	if (willSearch) {
 		app = [self FindURLForbundleIdentifier:NS_APP_NAME];
 		if(app == nil) {
-			NSRunAlertPanel(@"Program not found",
-							[NSString stringWithFormat:@"%@ program is not found", NS_APP_NAME],
+			NSRunAlertPanel(_L(@"Program not found"),
+							[NSString stringWithFormat:_L(@"%@ program is not found"), NS_APP_NAME],
 							@"OK", NULL, NULL);
 			CFRelease(value);
 			return nil;
@@ -226,8 +226,8 @@
 					send_login_notify=YES;
 				} else { // modify error
 					CFStringRef str = SecCopyErrorMessageString(status, NULL);
-					NSRunAlertPanel(@"Keychain data modify error",
-									[NSString stringWithFormat:@"Error Code: %d, message:%@", status, str],
+					NSRunAlertPanel(_L(@"Keychain data modify error"),
+									[NSString stringWithFormat:_L("Error Code: %ld, message:%@"), status, str],
 									@"OK", NULL, NULL);
 					CFRelease(str);
 				}
@@ -245,8 +245,8 @@
 				send_login_notify = YES;
 			} else { // keychan create error
 				CFStringRef str = SecCopyErrorMessageString(status, NULL);
-				NSRunAlertPanel(@"Keychain data add error",
-								[NSString stringWithFormat:@"Error Code: %d, message:%@", status, str],
+				NSRunAlertPanel(_L(@"Keychain data add error"),
+								[NSString stringWithFormat:_L("Error Code: %ld, message:%@"), status, str],
 								@"OK", NULL, NULL);
 				CFRelease(str);
                 
@@ -254,8 +254,8 @@
 			
 		} else { //keychain read error
 			CFStringRef str = SecCopyErrorMessageString(status, NULL);
-			NSRunAlertPanel(@"Keychain data read error",
-							[NSString stringWithFormat:@"Error Code: %d, message:%@", status, str],
+			NSRunAlertPanel(_L("Keychain data read error"),
+							[NSString stringWithFormat:_L("Error Code: %ld, message:%@"), status, str],
 							@"OK", NULL, NULL);
 			CFRelease(str);
 		}

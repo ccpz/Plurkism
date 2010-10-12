@@ -1,0 +1,23 @@
+//Copyright 2010 Yi-Ta Chiang
+//
+//Licensed under the Apache License, Version 2.0 (the "License");
+//you may not use this file except in compliance with the License.
+//You may obtain a copy of the License at 
+//
+//http://www.apache.org/licenses/LICENSE-2.0
+
+"Plurkism Error" = "Plurkism Error";
+"Growl is not installed" = "Growl is not installed";
+"Keychain data read error" = "Keychain data read error";
+"Error Code: %ld, message:%@" = "Error Code: %ld, message:%@";
+"Login Failed: %@" = "Login Failed: %@";
+"Login as %@ successed" = "Login as %@ successed";
+"Exit" = "Exit";
+"Error" = "Error";
+"Info" = "Info";
+"New Plurk Message" = "New Plurk Message";
+"New Plurk Response" = "New Plurk Response";
+"Program not found" = "Program not found";
+"%@ program is not found" = "%@ program is not found";
+"Keychain data modify error" = "Keychain data modify error";
+"Keychain data add error" = "Keychain data add error";
