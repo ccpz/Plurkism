@@ -267,7 +267,7 @@
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request {
-	NSString* msg = [NSString stringWithFormat:@"HTTP Request Fail: %d %@", [request responseStatusCode], [request responseStatusMessage]];
+	NSString* msg = [NSString stringWithFormat:_L(@"HTTP Request Fail: %d %@"), [request responseStatusCode], [request responseStatusMessage]];
 	[GrowlApplicationBridge notifyWithTitle:_L(NOTE_ERROR) description:msg notificationName:NOTE_ERROR iconData:nil priority:0 isSticky:NO clickContext:nil];
 }
 #pragma mark -

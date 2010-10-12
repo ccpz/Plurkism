@@ -10,6 +10,7 @@
 "Growl is not installed" = "沒有安裝 Growl";
 "Keychain data read error" = "讀取 Keychain 時發生錯誤";
 "Error Code: %ld, message:%@" = "錯誤碼: %ld, 說明:%@";
+"HTTP Request Fail: %d %@" = "HTTP 連線錯誤: %d %@";
 "Login Failed: %@" = "登入失敗，原因: %@";
 "Login as %@ successed" = "以 %@ 登入成功";
 "Exit" = "離開";
