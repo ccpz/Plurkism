@@ -220,9 +220,7 @@
 			if([offset isEqualToNumber:[NSNumber numberWithInt:-3]]==YES) {
 				/*resync channel*/
 				NSURL* url = [NSURL URLWithString:[self PlurkAPIUrl:API_PATH_GETCHANNEL withGET:[NSString stringWithFormat:@"api_key=%@", API_KEY]]];
-				ASIHTTPRequest *request2 = [ASIHTTPRequest requestWithURL:url];
-				[request2 setDelegate:self];
-				[request2 startAsynchronous];
+				[self SendRequest:url];
 			} else {
 				/*wait for next message*/
 				NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&offset=%@", channel, [offset stringValue]]];
@@ -267,8 +265,21 @@
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request {
-	NSString* msg = [NSString stringWithFormat:_L(@"HTTP Request Fail: %d %@"), [request responseStatusCode], [request responseStatusMessage]];
+	NSString* msg;
+	if ([request responseStatusCode]==0) {
+		msg = [NSString stringWithFormat:_L(@"HTTP Request Fail: %@"), [[request error] localizedDescription]];
+	} else {
+		msg = [NSString stringWithFormat:_L(@"HTTP Request Fail: %@"), [request responseStatusMessage]];
+	}
 	[GrowlApplicationBridge notifyWithTitle:_L(NOTE_ERROR) description:msg notificationName:NOTE_ERROR iconData:nil priority:0 isSticky:NO clickContext:nil];
+	NSTimer *timer = [NSTimer timerWithTimeInterval:30 target:self selector:@selector(timerFireMethod:) userInfo:(id)request repeats:NO];
+	[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];  
+    [[NSRunLoop currentRunLoop] run];
+}
+
+- (void)timerFireMethod:(NSTimer*)theTimer {
+	ASIHTTPRequest *orig_request = [theTimer userInfo];
+	[self SendRequest:[orig_request url] withID:[orig_request requestID]];
 }
 #pragma mark -
 @end

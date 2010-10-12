@@ -35,5 +35,6 @@
 -(NSString*) PlurkAPIUrl:(NSString*) url withGET:(NSString*)get_string withSSL:(BOOL)SSL;
 -(NSString*) avatarURL:(NSDictionary*) user;
 -(NSNumber*) UniqueID;
+- (void)timerFireMethod:(NSTimer*)theTimer;
 
 @end

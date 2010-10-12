@@ -10,7 +10,7 @@
 "Growl is not installed" = "Growl is not installed";
 "Keychain data read error" = "Keychain data read error";
 "Error Code: %ld, message:%@" = "Error Code: %ld, message:%@";
-"HTTP Request Fail: %d %@" = "HTTP Request Fail: %d %@";
+"HTTP Request Fail: %@" = "HTTP Request Fail: %@";
 "Login Failed: %@" = "Login Failed: %@";
 "Login as %@ successed" = "Login as %@ successed";
 "Exit" = "Exit";
