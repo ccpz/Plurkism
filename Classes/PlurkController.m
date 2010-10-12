@@ -62,8 +62,8 @@
 			
 		} else {
 			CFStringRef msg = SecCopyErrorMessageString(status, NULL);
-			NSRunAlertPanel(@"Keychain data read error",
-							[NSString stringWithFormat:@"Error Code: %ld, message:%@", status, msg],
+			NSRunAlertPanel(_L(@"Keychain data read error"),
+							[NSString stringWithFormat:_L(@"Error Code: %ld, message:%@"), status, msg],
 							@"OK", NULL, NULL);
 			CFRelease(msg);
 		}
@@ -148,8 +148,8 @@
 		if([request responseStatusCode]==400) {
 			SBJsonParser* json = [[SBJsonParser alloc] init];
 			NSDictionary* data = [json objectWithString:[request responseString]];
-			NSString* msg = [NSString stringWithFormat:@"Login Failed: %@", [data objectForKey:@"error_text"]];
-			[GrowlApplicationBridge notifyWithTitle:@"Error" description:msg notificationName:NOTE_ERROR iconData:nil priority:0 isSticky:NO clickContext:nil];
+			NSString* msg = [NSString stringWithFormat:_L(@"Login Failed: %@"), [data objectForKey:@"error_text"]];
+			[GrowlApplicationBridge notifyWithTitle:_L(@"Error") description:msg notificationName:NOTE_ERROR iconData:nil priority:0 isSticky:NO clickContext:nil];
 			[json release];
 		} else {
 			SBJsonParser* json = [[SBJsonParser alloc] init];
@@ -160,8 +160,8 @@
 			if([rawname length]==0) {
 				rawname = [userinfo objectForKey:@"nick_name"];
 			}
-			NSString* msg = [NSString stringWithFormat:@"Login as %@ successed", rawname];
-			[GrowlApplicationBridge notifyWithTitle:@"Information" description:msg notificationName:NOTE_INFO iconData:nil priority:0 isSticky:NO clickContext:nil];
+			NSString* msg = [NSString stringWithFormat:_L(@"Login as %@ successed"), rawname];
+			[GrowlApplicationBridge notifyWithTitle:_L(NOTE_INFO) description:msg notificationName:NOTE_INFO iconData:nil priority:0 isSticky:NO clickContext:nil];
 			NSURL* url = [NSURL URLWithString:[self PlurkAPIUrl:API_PATH_GETCHANNEL withGET:[NSString stringWithFormat:@"api_key=%@", API_KEY]]];
 			[self SendRequest:url];
 		}
@@ -246,10 +246,10 @@
 			plurk_id /=36;
 		} while (plurk_id!=0);
 		
-		NSString* title = NOTE_NEWMESSAGE;
+		NSString* title = _L(NOTE_NEWMESSAGE);
 		if([type caseInsensitiveCompare:@"new_response"]==NSOrderedSame) {
 			d = [d objectForKey:@"response"];
-			title = NOTE_NEWRESPONSE;	
+			title = _L(NOTE_NEWRESPONSE);	
 		}
 		
 		NSString* name = [users objectForKey:[request requestID]];
@@ -268,7 +268,7 @@
 
 - (void)requestFailed:(ASIHTTPRequest *)request {
 	NSString* msg = [NSString stringWithFormat:@"HTTP Request Fail: %d %@", [request responseStatusCode], [request responseStatusMessage]];
-	[GrowlApplicationBridge notifyWithTitle:@"Error" description:msg notificationName:NOTE_ERROR iconData:nil priority:0 isSticky:NO clickContext:nil];
+	[GrowlApplicationBridge notifyWithTitle:_L(NOTE_ERROR) description:msg notificationName:NOTE_ERROR iconData:nil priority:0 isSticky:NO clickContext:nil];
 }
 #pragma mark -
 @end

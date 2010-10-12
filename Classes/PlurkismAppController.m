@@ -62,7 +62,7 @@
 	PlurkismGrowlDelegate* delegate = [[PlurkismGrowlDelegate alloc] init];
 	
 	if([GrowlApplicationBridge isGrowlInstalled]==NO) {
-		NSRunAlertPanel(@"Plurkism Error", @"Growl is not installed", @"Exit", NULL, NULL);
+		NSRunAlertPanel(@"Plurkism Error", _L(@"Growl is not installed"), _L(@"Exit"), NULL, NULL);
 		[NSApp terminate:self];
 	}
 	

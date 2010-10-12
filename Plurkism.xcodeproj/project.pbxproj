@@ -44,6 +44,8 @@
 		F2AEBF9A1248371C00BC51EF /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AEBF941248371C00BC51EF /* SBJsonParser.m */; };
 		F2AEBF9B1248371C00BC51EF /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AEBF961248371C00BC51EF /* SBJsonWriter.m */; };
 		F2EC66D71248BBAA00E90D60 /* openSetting.scpt in Resources */ = {isa = PBXBuildFile; fileRef = F2EC66D61248BBAA00E90D60 /* openSetting.scpt */; };
+		F2FA5C1C1263F4D70008663F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2FA5C1B1263F4D70008663F /* Localizable.strings */; };
+		F2FA5C1D1263F4D70008663F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2FA5C1B1263F4D70008663F /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -118,7 +120,9 @@
 		F2AEBF941248371C00BC51EF /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		F2AEBF951248371C00BC51EF /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		F2AEBF961248371C00BC51EF /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		F2EC66D61248BBAA00E90D60 /* openSetting.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = openSetting.scpt; sourceTree = "<group>"; };
+		F2EC66D61248BBAA00E90D60 /* openSetting.scpt */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.scpt; path = openSetting.scpt; sourceTree = "<group>"; };
+		F2FA5C111263E79A0008663F /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F2FA5C1F1263F4EF0008663F /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_TW; path = zh_TW.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,8 +217,9 @@
 		F2AEBF23124830FD00BC51EF = {
 			isa = PBXGroup;
 			children = (
-				F26EFA5D124848A700A69C88 /* Plurkism */,
 				F21684D312487D4B00A6AF17 /* Common.h */,
+				F2FA5C1B1263F4D70008663F /* Localizable.strings */,
+				F26EFA5D124848A700A69C88 /* Plurkism */,
 				F26EFA3C124848A000A69C88 /* PlurkismPane */,
 				F2AEBF33124830FE00BC51EF /* Products */,
 			);
@@ -383,6 +388,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				zh_TW,
 			);
 			mainGroup = F2AEBF23124830FD00BC51EF;
 			productRefGroup = F2AEBF33124830FE00BC51EF /* Products */;
@@ -406,6 +412,7 @@
 				F26EFA641248492D00A69C88 /* BSD.txt in Resources */,
 				F26EFA651248492D00A69C88 /* icon.icns in Resources */,
 				F26EFA671248492D00A69C88 /* stig.txt in Resources */,
+				F2FA5C1D1263F4D70008663F /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +424,7 @@
 				F2AEBF43124830FE00BC51EF /* Credits.rtf in Resources */,
 				F2AEBF5A124831AC00BC51EF /* icon.icns in Resources */,
 				F2EC66D71248BBAA00E90D60 /* openSetting.scpt in Resources */,
+				F2FA5C1C1263F4D70008663F /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +495,15 @@
 				F2AEBF42124830FE00BC51EF /* en */,
 			);
 			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		F2FA5C1B1263F4D70008663F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2FA5C111263E79A0008663F /* English */,
+				F2FA5C1F1263F4EF0008663F /* zh_TW */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

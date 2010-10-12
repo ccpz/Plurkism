@@ -14,3 +14,5 @@
 #define NOTIFY_LOGIN @"net.ytchiang.Plurkism.notify.login"
 #define NOTIFY_DEBUG @"net.ytchiang.Plurkism.notify.debug"
 #define NOTIFY_STOP @"net.ytchiang.Plurkism.notify.stop"
+
+#define _L(STR) (NSLocalizedString(STR, nil))

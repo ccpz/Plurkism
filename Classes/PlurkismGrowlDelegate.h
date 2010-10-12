@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "Growl.framework/Headers/Growl.h"
+#import "Common.h"
 
 #define NOTE_ERROR @"Error"
 #define NOTE_INFO @"Info"
 #define NOTE_NEWMESSAGE @"New Plurk Message"
 #define NOTE_NEWRESPONSE @"New Plurk Response"
-
 
 @interface PlurkismGrowlDelegate : NSObject<GrowlApplicationBridgeDelegate> {
 
