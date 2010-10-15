@@ -244,16 +244,16 @@
 			plurk_id /=36;
 		} while (plurk_id!=0);
 		
-		NSString* title = _L(NOTE_NEWMESSAGE);
+		NSString* title = NOTE_NEWMESSAGE;
 		if([type caseInsensitiveCompare:@"new_response"]==NSOrderedSame) {
 			d = [d objectForKey:@"response"];
-			title = _L(NOTE_NEWRESPONSE);	
+			title = NOTE_NEWRESPONSE;	
 		}
 		
 		NSString* name = [users objectForKey:[request requestID]];
 		NSString * content = [d objectForKey:@"content_raw"];
 		NSString* msg = [NSString stringWithFormat:@"%@ %@ %@", name, [d objectForKey:@"qualifier"], [NSString stringWithUTF8String:[content UTF8String]]];
-		[GrowlApplicationBridge notifyWithTitle:title description:msg notificationName:title iconData:[request responseData] priority:0 isSticky:NO clickContext:stringID];
+		[GrowlApplicationBridge notifyWithTitle:_L(title) description:msg notificationName:title iconData:[request responseData] priority:0 isSticky:NO clickContext:stringID];
 		
 		NSNumber* offset = [message objectForKey:@"new_offset"];
 		NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&offset=%@", channel, [offset stringValue]]];
