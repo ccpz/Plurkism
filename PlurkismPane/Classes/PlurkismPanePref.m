@@ -227,7 +227,7 @@
 				} else { // modify error
 					CFStringRef str = SecCopyErrorMessageString(status, NULL);
 					NSRunAlertPanel(_L(@"Keychain data modify error"),
-									[NSString stringWithFormat:_L("Error Code: %ld, message:%@"), status, str],
+									[NSString stringWithFormat:_L(@"Error Code: %ld, message:%@"), status, str],
 									@"OK", NULL, NULL);
 					CFRelease(str);
 				}
@@ -246,7 +246,7 @@
 			} else { // keychan create error
 				CFStringRef str = SecCopyErrorMessageString(status, NULL);
 				NSRunAlertPanel(_L(@"Keychain data add error"),
-								[NSString stringWithFormat:_L("Error Code: %ld, message:%@"), status, str],
+								[NSString stringWithFormat:_L(@"Error Code: %ld, message:%@"), status, str],
 								@"OK", NULL, NULL);
 				CFRelease(str);
                 
@@ -254,8 +254,8 @@
 			
 		} else { //keychain read error
 			CFStringRef str = SecCopyErrorMessageString(status, NULL);
-			NSRunAlertPanel(_L("Keychain data read error"),
-							[NSString stringWithFormat:_L("Error Code: %ld, message:%@"), status, str],
+			NSRunAlertPanel(_L(@"Keychain data read error"),
+							[NSString stringWithFormat:_L(@"Error Code: %ld, message:%@"), status, str],
 							@"OK", NULL, NULL);
 			CFRelease(str);
 		}

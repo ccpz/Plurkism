@@ -8,6 +8,7 @@
 
 "Plurkism Error" = "Plurkism Error";
 "Growl is not installed" = "Growl is not installed";
+"Growl is not running" = "Growl is not running";
 "Keychain data read error" = "Keychain data read error";
 "Error Code: %ld, message:%@" = "Error Code: %ld, message:%@";
 "HTTP Request Fail: %@" = "HTTP Request Fail: %@";

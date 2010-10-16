@@ -17,17 +17,17 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.1</string>
+	<string>1.0.2</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.0.2</string>
 	<key>NSMainNibFile</key>
 	<string>PlurkismPane</string>
 	<key>NSPrefPaneIconFile</key>
 	<string>plurkism-icon.png</string>
 	<key>NSPrefPaneIconLabel</key>
-	<string>PlurkismPane</string>
+	<string>Plurkism</string>
 	<key>NSPrincipalClass</key>
 	<string>PlurkismPane</string>
 </dict>

@@ -65,6 +65,10 @@
 		NSRunAlertPanel(@"Plurkism Error", _L(@"Growl is not installed"), _L(@"Exit"), NULL, NULL);
 		[NSApp terminate:self];
 	}
+	if([GrowlApplicationBridge isGrowlRunning]==NO) {
+		NSRunAlertPanel(@"Plurkism Error", _L(@"Growl is not running"), _L(@"Exit"), NULL, NULL);
+		[NSApp terminate:self];
+	}
 	
 	[GrowlApplicationBridge setGrowlDelegate:delegate];
 	[delegate release];

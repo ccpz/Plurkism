@@ -8,6 +8,7 @@
 
 "Plurkism Error" = "Plurkism 錯誤";
 "Growl is not installed" = "沒有安裝 Growl";
+"Growl is not running" = "請先執行 Growl";
 "Keychain data read error" = "讀取 Keychain 時發生錯誤";
 "Error Code: %ld, message:%@" = "錯誤碼: %ld, 說明:%@";
 "HTTP Request Fail: %@" = "HTTP 連線錯誤: %@";

@@ -149,7 +149,10 @@
 			SBJsonParser* json = [[SBJsonParser alloc] init];
 			NSDictionary* data = [json objectWithString:[request responseString]];
 			NSString* msg = [NSString stringWithFormat:_L(@"Login Failed: %@"), [data objectForKey:@"error_text"]];
-			[GrowlApplicationBridge notifyWithTitle:_L(@"Error") description:msg notificationName:NOTE_ERROR iconData:nil priority:0 isSticky:NO clickContext:nil];
+			if ([(PlurkismAppController*)[NSApp delegate] debug]) {
+				NSLog(@"Sending to Growl with notificationName:%@, notifyWithTitle:%@, description:%@", NOTE_ERROR, _L(NOTE_ERROR), msg);
+			}
+			[GrowlApplicationBridge notifyWithTitle:_L(NOTE_ERROR) description:msg notificationName:NOTE_ERROR iconData:nil priority:0 isSticky:NO clickContext:nil];
 			[json release];
 		} else {
 			SBJsonParser* json = [[SBJsonParser alloc] init];
@@ -161,6 +164,9 @@
 				rawname = [userinfo objectForKey:@"nick_name"];
 			}
 			NSString* msg = [NSString stringWithFormat:_L(@"Login as %@ successed"), rawname];
+			if ([(PlurkismAppController*)[NSApp delegate] debug]) {
+				NSLog(@"Sending to Growl with notificationName:%@, notifyWithTitle:%@, description:%@", NOTE_INFO, _L(NOTE_INFO), msg);
+			}
 			[GrowlApplicationBridge notifyWithTitle:_L(NOTE_INFO) description:msg notificationName:NOTE_INFO iconData:nil priority:0 isSticky:NO clickContext:nil];
 			NSURL* url = [NSURL URLWithString:[self PlurkAPIUrl:API_PATH_GETCHANNEL withGET:[NSString stringWithFormat:@"api_key=%@", API_KEY]]];
 			[self SendRequest:url];
@@ -253,6 +259,9 @@
 		NSString* name = [users objectForKey:[request requestID]];
 		NSString * content = [d objectForKey:@"content_raw"];
 		NSString* msg = [NSString stringWithFormat:@"%@ %@ %@", name, [d objectForKey:@"qualifier"], [NSString stringWithUTF8String:[content UTF8String]]];
+		if ([(PlurkismAppController*)[NSApp delegate] debug]) {
+			NSLog(@"Sending to Growl with notificationName:%@, notifyWithTitle:%@, description:%@", title, _L(title), msg);
+		}
 		[GrowlApplicationBridge notifyWithTitle:_L(title) description:msg notificationName:title iconData:[request responseData] priority:0 isSticky:NO clickContext:stringID];
 		
 		NSNumber* offset = [message objectForKey:@"new_offset"];
@@ -270,6 +279,9 @@
 		msg = [NSString stringWithFormat:_L(@"HTTP Request Fail: %@"), [[request error] localizedDescription]];
 	} else {
 		msg = [NSString stringWithFormat:_L(@"HTTP Request Fail: %@"), [request responseStatusMessage]];
+	}
+	if ([(PlurkismAppController*)[NSApp delegate] debug]) {
+		NSLog(@"Sending to Growl with notificationName:%@, notifyWithTitle:%@, description:%@", NOTE_ERROR, _L(NOTE_ERROR), msg);
 	}
 	[GrowlApplicationBridge notifyWithTitle:_L(NOTE_ERROR) description:msg notificationName:NOTE_ERROR iconData:nil priority:0 isSticky:NO clickContext:nil];
 	NSTimer *timer = [NSTimer timerWithTimeInterval:30 target:self selector:@selector(timerFireMethod:) userInfo:(id)request repeats:NO];
