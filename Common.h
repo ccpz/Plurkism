@@ -15,4 +15,7 @@
 #define NOTIFY_DEBUG @"net.ytchiang.Plurkism.notify.debug"
 #define NOTIFY_STOP @"net.ytchiang.Plurkism.notify.stop"
 
+#define FB_API_KEY @"69bda0b38eda56c00e17eed25899b018"
+#define FB_API_SECRET @""
+
 #define _L(STR) (NSLocalizedString(STR, nil))

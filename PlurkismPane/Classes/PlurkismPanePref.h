@@ -21,6 +21,7 @@
 	IBOutlet NSTextField* userid;
 	IBOutlet NSSecureTextField* pass;
 	IBOutlet WebView* about;
+	IBOutlet WebView* FBOauth;
 	IBOutlet NSButton* debug;
 	IBOutlet NSButton* autostart;
 	BOOL has_autostart;

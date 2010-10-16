@@ -154,6 +154,12 @@
 	}
 	has_autostart = [self willStartAtLogin];
 	[autostart setState:[self willStartAtLogin]];
+	[[FBOauth mainFrame] loadRequest:[NSURLRequest requestWithURL:
+									[NSURL URLWithString:
+									 [NSString stringWithFormat:@"https://graph.facebook.com/oauth/authorize?client_id=%@& \
+									  redirect_uri=http://www.facebook.com/connect/login_success.html& \
+									  type=user_agent& \
+									  display=popup", FB_API_KEY]]]];
 	[[about mainFrame] loadHTMLString:[NSString stringWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"about" ofType:@"htm"] encoding:NSUTF8StringEncoding error:nil] baseURL:[NSURL URLWithString:@"http://about.htm"]];
 }
 
