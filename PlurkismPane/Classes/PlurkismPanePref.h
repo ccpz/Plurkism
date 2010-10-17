@@ -11,7 +11,7 @@
 #import <Security/Security.h>
 #import <CoreServices/CoreServices.h>
 #import <WebKit/WebKit.h>
-#import <WebKit/WebPolicyDelegate.h>
+#import <WebKit/WebFrameLoadDelegate.h>
 #import "Common.h"
 
 #define KEY_PATH CFSTR("KEYPATH")
@@ -24,6 +24,8 @@
 	IBOutlet WebView* FBOauth;
 	IBOutlet NSButton* debug;
 	IBOutlet NSButton* autostart;
+	IBOutlet NSTextField* webKitStatus;
+	IBOutlet NSProgressIndicator* isLoding;
 	BOOL has_autostart;
 }
 - (NSURL*) FindURLForbundleIdentifier:(NSString*) bundleIdentifier;

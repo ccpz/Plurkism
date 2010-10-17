@@ -153,13 +153,13 @@
 		CFRelease(account);
 	}
 	has_autostart = [self willStartAtLogin];
-	[autostart setState:[self willStartAtLogin]];
-	[[FBOauth mainFrame] loadRequest:[NSURLRequest requestWithURL:
-									[NSURL URLWithString:
-									 [NSString stringWithFormat:@"https://graph.facebook.com/oauth/authorize?client_id=%@& \
-									  redirect_uri=http://www.facebook.com/connect/login_success.html& \
-									  type=user_agent& \
-									  display=popup", FB_API_KEY]]]];
+	[FBOauth setMainFrameURL:[NSString stringWithFormat:@"https://graph.facebook.com/oauth/authorize?client_id=%@& \
+							  redirect_uri=http://www.facebook.com/connect/login_success.html& \
+							  type=user_agent& \
+							  display=popup", FB_API_KEY]];
+	[isLoding startAnimation:self];
+	[isLoding setHidden:NO];
+	[webKitStatus setStringValue:_L(@"Loading")];
 	[[about mainFrame] loadHTMLString:[NSString stringWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"about" ofType:@"htm"] encoding:NSUTF8StringEncoding error:nil] baseURL:[NSURL URLWithString:@"http://about.htm"]];
 }
 
@@ -293,4 +293,26 @@
 	}
 	
 }
+
+#pragma mark WebResourceLoadDelegate
+- (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame {
+	[isLoding setHidden:YES];
+	[isLoding startAnimation:NO];
+	[webKitStatus setStringValue:_L(@"Loading complete")];
+	//auth success: http://www.facebook.com/connect/login_success.html#access_token=
+	//auth fail: http://www.facebook.com/connect/login_success.html?error_reason=user_denied&error=access_denied&error_description=The+user+denied+your+request.
+	//TODO: webKitStatus text cannot change, window size grow, parse auth token
+	if ([[sender mainFrameURL] hasPrefix:@"http://www.facebook.com/connect/login_success.html"]) {
+		NSURL* url = [NSURL URLWithString:[sender mainFrameURL]];
+		NSString* query = [url query];
+		NSLog(@"%@", query);
+	}
+}
+
+- (void)webView:(WebView *)sender didFailLoadWithError:(NSError *)error forFrame:(WebFrame *)frame {
+	[isLoding setHidden:YES];
+	[isLoding startAnimation:NO];
+	[webKitStatus setStringValue:[NSString stringWithFormat:_L(@"Loading fail, reason: %@"), [error localizedDescription]]];
+}
+#pragma mark -
 @end

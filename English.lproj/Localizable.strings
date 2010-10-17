@@ -22,3 +22,6 @@
 "%@ program is not found" = "%@ program is not found";
 "Keychain data modify error" = "Keychain data modify error";
 "Keychain data add error" = "Keychain data add error";
+"Loading" = "Loading";
+"Loading complete" = "Loading complete";
+"Loading fail, reason: %@" = "Loading fail, reason: %@";

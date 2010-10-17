@@ -78,6 +78,7 @@
 		F26EFA631248492D00A69C88 /* stig.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stig.txt; sourceTree = "<group>"; };
 		F26EFA681248494100A69C88 /* PlurkismPanePref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlurkismPanePref.h; sourceTree = "<group>"; };
 		F26EFA691248494100A69C88 /* PlurkismPanePref.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlurkismPanePref.m; sourceTree = "<group>"; };
+		F283AB6B126A875C003DD3DC /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_TW; path = zh_TW.lproj/PlurkismPane.xib; sourceTree = "<group>"; };
 		F2AEBF32124830FE00BC51EF /* Plurkism.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plurkism.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2AEBF35124830FE00BC51EF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F2AEBF37124830FE00BC51EF /* Plurkism-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Plurkism-Info.plist"; sourceTree = "<group>"; };
@@ -120,7 +121,6 @@
 		F2AEBF951248371C00BC51EF /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		F2AEBF961248371C00BC51EF /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		F2EC66D61248BBAA00E90D60 /* openSetting.scpt */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.scpt; path = openSetting.scpt; sourceTree = "<group>"; };
-		F2F9421312692CA3000DB1FF /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_TW; path = zh_TW.lproj/PlurkismPane.xib; sourceTree = "<group>"; };
 		F2FA5C111263E79A0008663F /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F2FA5C1F1263F4EF0008663F /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_TW; path = zh_TW.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F2FA5C221263FDD10008663F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -507,7 +507,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F2FA5D0812640A160008663F /* English */,
-				F2F9421312692CA3000DB1FF /* zh_TW */,
+				F283AB6B126A875C003DD3DC /* zh_TW */,
 			);
 			name = PlurkismPane.xib;
 			sourceTree = "<group>";

@@ -22,3 +22,6 @@
 "%@ program is not found" = "%@ 程式找不到";
 "Keychain data modify error" = "修改 Keychain 時發生錯誤";
 "Keychain data add error" = "新增 Keychain 時發生錯誤";
+"Loading" = "載入中";
+"Loading complete" = "載入完畢";
+"Loading fail, reason: %@" = "載入錯誤，原因: %@";
