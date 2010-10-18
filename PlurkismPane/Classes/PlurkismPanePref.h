@@ -35,4 +35,5 @@
 - (CFPropertyListRef) getPrefValue:(CFStringRef)key withAPP:(CFStringRef)app andType:(CFTypeID)type;
 - (void) mainViewDidLoad;
 
+- (IBAction) reloadFB: (id) sender;
 @end

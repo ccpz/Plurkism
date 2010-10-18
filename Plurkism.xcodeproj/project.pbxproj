@@ -78,7 +78,7 @@
 		F26EFA631248492D00A69C88 /* stig.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stig.txt; sourceTree = "<group>"; };
 		F26EFA681248494100A69C88 /* PlurkismPanePref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlurkismPanePref.h; sourceTree = "<group>"; };
 		F26EFA691248494100A69C88 /* PlurkismPanePref.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlurkismPanePref.m; sourceTree = "<group>"; };
-		F283AB6B126A875C003DD3DC /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_TW; path = zh_TW.lproj/PlurkismPane.xib; sourceTree = "<group>"; };
+		F29DD70B126C29A4001EB8B0 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_TW; path = zh_TW.lproj/PlurkismPane.xib; sourceTree = "<group>"; };
 		F2AEBF32124830FE00BC51EF /* Plurkism.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plurkism.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2AEBF35124830FE00BC51EF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F2AEBF37124830FE00BC51EF /* Plurkism-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Plurkism-Info.plist"; sourceTree = "<group>"; };
@@ -507,7 +507,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F2FA5D0812640A160008663F /* English */,
-				F283AB6B126A875C003DD3DC /* zh_TW */,
+				F29DD70B126C29A4001EB8B0 /* zh_TW */,
 			);
 			name = PlurkismPane.xib;
 			sourceTree = "<group>";

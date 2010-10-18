@@ -153,13 +153,7 @@
 		CFRelease(account);
 	}
 	has_autostart = [self willStartAtLogin];
-	[FBOauth setMainFrameURL:[NSString stringWithFormat:@"https://graph.facebook.com/oauth/authorize?client_id=%@& \
-							  redirect_uri=http://www.facebook.com/connect/login_success.html& \
-							  type=user_agent& \
-							  display=popup", FB_API_KEY]];
-	[isLoding startAnimation:self];
-	[isLoding setHidden:NO];
-	[webKitStatus setStringValue:_L(@"Loading")];
+	[self reloadFB:self];
 	[[about mainFrame] loadHTMLString:[NSString stringWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"about" ofType:@"htm"] encoding:NSUTF8StringEncoding error:nil] baseURL:[NSURL URLWithString:@"http://about.htm"]];
 }
 
@@ -301,7 +295,7 @@
 	[webKitStatus setStringValue:_L(@"Loading complete")];
 	//auth success: http://www.facebook.com/connect/login_success.html#access_token=
 	//auth fail: http://www.facebook.com/connect/login_success.html?error_reason=user_denied&error=access_denied&error_description=The+user+denied+your+request.
-	//TODO:window size grow, parse auth fail
+	//TODO:handle error (password error,...) correctly
 	if ([[sender mainFrameURL] hasPrefix:@"http://www.facebook.com/connect/login_success.html"]) {
 		NSURL* url = [NSURL URLWithString:[sender mainFrameURL]];
 		NSString* fragment = [url fragment];
@@ -325,7 +319,20 @@
 				}
 			}
 			NSLog(@"%@ %@", token, expire);
+		} else {
+			NSString* query = [url query];
+			NSArray* queries = [query componentsSeparatedByString:@"&"];
+			for(NSString* line in queries) {
+				NSArray* split = [line componentsSeparatedByString:@"="];
+				if ([split count]!=2) {
+					NSLog(@"Split error: %@", line);
+				}
+				else if ([[split objectAtIndex:0] isEqualTo:@"error_reason"]) {
+					[webKitStatus setStringValue:[NSString stringWithFormat:_L(@"Login fail, reason: %@"), [split objectAtIndex:1]]];
+				}
+			}
 		}
+		[FBOauth setHidden:YES];
 	}
 }
 
@@ -335,4 +342,15 @@
 	[webKitStatus setStringValue:[NSString stringWithFormat:_L(@"Loading fail, reason: %@"), [error localizedDescription]]];
 }
 #pragma mark -
+
+- (IBAction) reloadFB: (id) sender {
+	[FBOauth setHidden:NO];
+	[FBOauth setMainFrameURL:[NSString stringWithFormat:@"https://graph.facebook.com/oauth/authorize?client_id=%@& \
+							  redirect_uri=http://www.facebook.com/connect/login_success.html& \
+							  type=user_agent& \
+							  display=page", FB_API_KEY]];
+	[isLoding startAnimation:self];
+	[isLoding setHidden:NO];
+	[webKitStatus setStringValue:_L(@"Loading")];
+}
 @end

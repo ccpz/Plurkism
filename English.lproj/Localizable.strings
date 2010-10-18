@@ -25,3 +25,4 @@
 "Loading" = "Loading";
 "Loading complete" = "Loading complete";
 "Loading fail, reason: %@" = "Loading fail, reason: %@";
+"Login fail, reason: %@" = "Login fail, reason: %@";

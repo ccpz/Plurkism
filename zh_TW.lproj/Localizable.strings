@@ -25,3 +25,4 @@
 "Loading" = "載入中";
 "Loading complete" = "載入完畢";
 "Loading fail, reason: %@" = "載入錯誤，原因: %@";
+"Login fail, reason: %@" = "登入失敗，原因: %@";
