@@ -301,7 +301,7 @@
 	[webKitStatus setStringValue:_L(@"Loading complete")];
 	//auth success: http://www.facebook.com/connect/login_success.html#access_token=
 	//auth fail: http://www.facebook.com/connect/login_success.html?error_reason=user_denied&error=access_denied&error_description=The+user+denied+your+request.
-	//TODO: webKitStatus text cannot change, window size grow, parse auth token
+	//TODO:window size grow, parse auth token
 	if ([[sender mainFrameURL] hasPrefix:@"http://www.facebook.com/connect/login_success.html"]) {
 		NSURL* url = [NSURL URLWithString:[sender mainFrameURL]];
 		NSString* query = [url query];

@@ -306,12 +306,12 @@
 											<object class="NSTextField" id="567334995">
 												<reference key="NSNextResponder" ref="287081853"/>
 												<int key="NSvFlags">268</int>
-												<string key="NSFrame">{{275, 13}, {55, 17}}</string>
+												<string key="NSFrame">{{76, 13}, {508, 17}}</string>
 												<reference key="NSSuperview" ref="287081853"/>
 												<bool key="NSEnabled">YES</bool>
 												<object class="NSTextFieldCell" key="NSCell" id="840390323">
 													<int key="NSCellFlags">68288064</int>
-													<int key="NSCellFlags2">272630784</int>
+													<int key="NSCellFlags2">138413056</int>
 													<string key="NSContents">Loading</string>
 													<reference key="NSSupport" ref="829068425"/>
 													<reference key="NSControlView" ref="567334995"/>
