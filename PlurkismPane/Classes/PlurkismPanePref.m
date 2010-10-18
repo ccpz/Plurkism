@@ -301,11 +301,31 @@
 	[webKitStatus setStringValue:_L(@"Loading complete")];
 	//auth success: http://www.facebook.com/connect/login_success.html#access_token=
 	//auth fail: http://www.facebook.com/connect/login_success.html?error_reason=user_denied&error=access_denied&error_description=The+user+denied+your+request.
-	//TODO:window size grow, parse auth token
+	//TODO:window size grow, parse auth fail
 	if ([[sender mainFrameURL] hasPrefix:@"http://www.facebook.com/connect/login_success.html"]) {
 		NSURL* url = [NSURL URLWithString:[sender mainFrameURL]];
-		NSString* query = [url query];
-		NSLog(@"%@", query);
+		NSString* fragment = [url fragment];
+		if (fragment!=nil) {
+			NSArray* frags = [fragment componentsSeparatedByString:@"&"];
+			NSString* token=nil;
+			NSString* expire=nil;
+			for(NSString* line in frags) {
+				NSArray* split = [line componentsSeparatedByString:@"="];
+				if ([split count]!=2) {
+					NSLog(@"Split error: %@", line);
+				}
+				else if ([[split objectAtIndex:0] isEqualTo:@"access_token"]) {
+					token = [split objectAtIndex:1];
+				}
+				else if ([[split objectAtIndex:0] isEqualTo:@"expires_in"]) {
+					expire = [split objectAtIndex:1];
+				}		 
+				else {
+					NSLog(@"Unknown Fragment: %@", line);
+				}
+			}
+			NSLog(@"%@ %@", token, expire);
+		}
 	}
 }
 
