@@ -567,7 +567,17 @@ static NSOperationQueue *sharedQueue = nil;
 		return nil;
 	}
 	
-	return [[[NSString alloc] initWithBytes:[data bytes] length:[data length] encoding:[self responseEncoding]] autorelease];
+	NSString *tmp = [[[NSString alloc] initWithBytes:[data bytes] length:[data length] encoding:[self responseEncoding]] autorelease];
+	if([tmp rangeOfString:@"CometChannel.scriptCallback("].location != NSNotFound && [tmp rangeOfString:@");"].location != NSNotFound)
+	{
+		return [NSString stringWithString:
+					[tmp substringWithRange:
+							NSMakeRange(
+									[tmp rangeOfString:@"CometChannel.scriptCallback("].length, 
+									[tmp rangeOfString:@");"].location-[tmp rangeOfString:@"CometChannel.scriptCallback("].length)]];
+	}
+	else
+		return tmp;
 }
 
 - (BOOL)isResponseCompressed
