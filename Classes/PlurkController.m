@@ -198,7 +198,9 @@
 		[self SendRequest:[NSURL URLWithString:[self avatarURL:userinfo]] withID:[request requestID]];
 	}else if ([[[request url] path] rangeOfString:@"comet" options:NSCaseInsensitiveSearch].location != NSNotFound) {
 		SBJsonParser* json = [[SBJsonParser alloc] init];
-		NSDictionary* data = [json objectWithString:[request responseString]];
+		//skip "CometChannel.scriptCallback(", ");"
+		NSString* cut = [[request responseString] substringWithRange:NSMakeRange(28, [[request responseString] length]-28-2)];
+		NSDictionary* data = [json objectWithString:cut];
 		[json release];
 		
 		if([data objectForKey:@"data"]!=nil) {
