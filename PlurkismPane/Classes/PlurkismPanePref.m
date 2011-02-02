@@ -196,70 +196,9 @@
 		send_config_notify = YES;
 	}
 	
-	SecKeychainItemRef itemRef = nil;
-	UInt32 len;
-	char* orig_pw;
-	
 	if([pw_val length]!=0) { // only need to change when user input some data
-		
-		//check if keychain has data
-		status = SecKeychainFindGenericPassword(NULL,
-												strlen(APP_NAME),
-												APP_NAME,
-												strlen([(NSString*)KEY_USERNAME UTF8String]),
-												[(NSString*)KEY_USERNAME UTF8String],
-												&len,
-												(void**)&orig_pw,
-												&itemRef);
-		
-		if (status == noErr) { // have save password already
-			//compare original data
-			char* pw_pad_null = malloc(sizeof(char)*(len+1));
-			memcpy(pw_pad_null, orig_pw, len);
-			pw_pad_null[len]='\0';
-			if (![pw_val isEqualToString:[NSString stringWithUTF8String:pw_pad_null]]) { //value changed, modify data
-				status =  SecKeychainItemModifyAttributesAndData(itemRef,
-																 NULL,
-																 strlen([pw_val UTF8String]),
-                                                                 (const void*)[pw_val UTF8String]);
-				if(status==noErr) {
-					send_login_notify=YES;
-				} else { // modify error
-					CFStringRef str = SecCopyErrorMessageString(status, NULL);
-					NSRunAlertPanel(_L(@"Keychain data modify error"),
-									[NSString stringWithFormat:_L("Error Code: %ld, message:%@"), status, str],
-									@"OK", NULL, NULL);
-					CFRelease(str);
-				}
-			}
-		} else if(status == errSecItemNotFound) { //create new keychain record
-			status = SecKeychainAddGenericPassword(NULL, 
-												   strlen(APP_NAME),
-												   APP_NAME,
-												   strlen([(NSString*)KEY_USERNAME UTF8String]),
-												   [(NSString*)KEY_USERNAME UTF8String],
-												   strlen([pw_val UTF8String]),
-												   (const void*)[pw_val UTF8String],
-												   NULL);
-			if(status ==noErr) {
-				send_login_notify = YES;
-			} else { // keychan create error
-				CFStringRef str = SecCopyErrorMessageString(status, NULL);
-				NSRunAlertPanel(_L(@"Keychain data add error"),
-								[NSString stringWithFormat:_L("Error Code: %ld, message:%@"), status, str],
-								@"OK", NULL, NULL);
-				CFRelease(str);
-                
-			}
-			
-		} else { //keychain read error
-			CFStringRef str = SecCopyErrorMessageString(status, NULL);
-			NSRunAlertPanel(_L("Keychain data read error"),
-							[NSString stringWithFormat:_L("Error Code: %ld, message:%@"), status, str],
-							@"OK", NULL, NULL);
-			CFRelease(str);
-		}
-		if (itemRef) CFRelease(itemRef);
+		BOOL ret=[self saveToKeychainAppName:APP_NAME withAccount:(NSString*)KEY_USERNAME withData:pw_val];
+		if(ret==YES) send_login_notify=YES;
 	}
 	
 	CFPreferencesAppSynchronize(CFSTR(APP_NAME));
@@ -286,6 +225,73 @@
 		[listener use];
 	}
 	
+}
+
+- (BOOL) saveToKeychainAppName:(NSString*)name withAccount:(NSString*)account withData:(NSString*) data{
+	SecKeychainItemRef itemRef = nil;
+	BoOOL ret;
+	UInt32 len;
+	char* orig_pw;
+	//check if keychain has data
+	OSStatus status = SecKeychainFindGenericPassword(NULL,
+											strlen([name UTF8String]),
+											[name UTF8String],
+											strlen([account UTF8String]),
+											[account UTF8String],
+											&len,
+											(void**)&orig_pw,
+											&itemRef);
+	
+	if (status == noErr) { // have save password already
+		//compare original data
+		char* pw_pad_null = malloc(sizeof(char)*(len+1));
+		memcpy(pw_pad_null, orig_pw, len);
+		pw_pad_null[len]='\0';
+		if (![data isEqualToString:[NSString stringWithUTF8String:pw_pad_null]]) { //value changed, modify data
+			status =  SecKeychainItemModifyAttributesAndData(itemRef,
+															 NULL,
+															 strlen([data UTF8String]),
+															 (const void*)[data UTF8String]);
+			if(status==noErr) {
+				ret=YES;
+			} else { // modify error
+				CFStringRef str = SecCopyErrorMessageString(status, NULL);
+				NSRunAlertPanel(_L(@"Keychain data modify error"),
+								[NSString stringWithFormat:_L("Error Code: %ld, message:%@"), status, str],
+								@"OK", NULL, NULL);
+				ret=NO;
+			}
+		}
+	} else if(status == errSecItemNotFound) { //create new keychain record
+		status = SecKeychainAddGenericPassword(NULL, 
+											   strlen([name UTF8String]),
+											   [name UTF8String],
+											   strlen([account UTF8String]),
+											   [account UTF8String],
+											   strlen([data UTF8String]),
+											   (const void*)[data UTF8String],
+											   NULL);
+		if(status ==noErr) {
+			ret=YES;
+		} else { // keychan create error
+			CFStringRef str = SecCopyErrorMessageString(status, NULL);
+			NSRunAlertPanel(_L(@"Keychain data add error"),
+							[NSString stringWithFormat:_L("Error Code: %ld, message:%@"), status, str],
+							@"OK", NULL, NULL);
+			CFRelease(str);
+			ret=NO;
+		}
+		
+	} else { //keychain read error
+		CFStringRef str = SecCopyErrorMessageString(status, NULL);
+		NSRunAlertPanel(_L("Keychain data read error"),
+						[NSString stringWithFormat:_L("Error Code: %ld, message:%@"), status, str],
+						@"OK", NULL, NULL);
+		CFRelease(str);
+		ret=NO;
+	}
+	if (itemRef) CFRelease(itemRef);
+	return ret;
 }
 
 #pragma mark WebResourceLoadDelegate

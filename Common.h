@@ -18,4 +18,6 @@
 #define FB_API_KEY @"69bda0b38eda56c00e17eed25899b018"
 #define FB_API_SECRET @""
 
+#define KEY_FB CFSTR("Facebook")
+
 #define _L(STR) (NSLocalizedString(STR, nil))

@@ -35,5 +35,7 @@
 - (CFPropertyListRef) getPrefValue:(CFStringRef)key withAPP:(CFStringRef)app andType:(CFTypeID)type;
 - (void) mainViewDidLoad;
 
+//return YES if data changed
+- (BOOL) saveToKeychainAppName:(NSString*)name withAccount:(NSString*)account withData:(NSString*) data; 
 - (IBAction) reloadFB: (id) sender;
 @end
